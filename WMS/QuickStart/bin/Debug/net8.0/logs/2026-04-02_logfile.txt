@@ -1,0 +1,32 @@
+2026-04-02 03:46:18.1279 ERROR Something went wrong: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Entities.Models.MOrganisation, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.Organisation.OrganisationDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2026-04-02 03:47:14.4245 ERROR Something went wrong: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Entities.Models.MOrganisation, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.Organisation.OrganisationDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2026-04-02 03:48:40.9187 ERROR Something went wrong: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Entities.Models.MOrganisation, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.Organisation.OrganisationDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2026-04-02 03:49:42.9735 ERROR Something went wrong: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Entities.Models.MOrganisation, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.Organisation.OrganisationDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2026-04-02 03:49:54.7397 ERROR Something went wrong: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Entities.Models.MOrganisation, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Shared.DataTransferObjects.Organisation.OrganisationDto, Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2026-04-02 04:49:01.3149 ERROR Something went wrong: An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-02 04:49:28.1421 ERROR Something went wrong: An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-02 04:52:13.2199 ERROR Something went wrong: Object reference not set to an instance of an object.
+2026-04-02 04:52:59.9773 ERROR Something went wrong: Object reference not set to an instance of an object.
+2026-04-02 04:54:51.0380 ERROR Something went wrong: Object reference not set to an instance of an object.
+2026-04-02 04:55:03.2944 ERROR Something went wrong: Object reference not set to an instance of an object.
+2026-04-02 04:55:04.4147 ERROR Something went wrong: Object reference not set to an instance of an object.
