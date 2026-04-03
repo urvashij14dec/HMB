@@ -98,6 +98,6 @@ app.UseSwaggerUI(s =>
 
 app.MapControllers();
 
-//app.MapFallbackToController("Index", "Fallback");
+app.MapFallbackToController("Index", "Fallback");
 
 app.Run();

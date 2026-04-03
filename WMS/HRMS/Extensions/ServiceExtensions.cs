@@ -14,13 +14,12 @@ namespace WMS.Extensions
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder =>
-                builder.AllowAnyOrigin()
+                builder.WithOrigins("http://localhost:4200", "http://localhost:5173")
                 .AllowAnyMethod()
-                 .WithOrigins("http://localhost:4200")
-                  .AllowCredentials()
-                   .AllowAnyHeader()
+                .AllowCredentials()
                 .AllowAnyHeader());
             });
+
 
         public static void ConfigureIISIntegration(this IServiceCollection services) =>
             services.Configure<IISOptions>(options =>

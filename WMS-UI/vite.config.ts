@@ -12,4 +12,20 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    build: {
+        // Output directly to the HRMS backend wwwroot folder
+        outDir: path.resolve(__dirname, '../WMS/HRMS/wwwroot'),
+        emptyOutDir: true,
+    },
+    server: {
+        // Proxy API calls to the backend during development
+        proxy: {
+            '/api': {
+                target: 'https://localhost:5001',
+                changeOrigin: true,
+                secure: false,
+            },
+        },
+    },
 });
+

@@ -101,9 +101,15 @@ const DateRangePicker = lazy(() => import('../pages/Forms/DateRangePicker'));
 const Clipboard = lazy(() => import('../pages/Forms/Clipboard'));
 
 const routes = [
-    // dashboard
+    // Login page (starting page)
     {
         path: '/',
+        element: <LoginCover />,
+        layout: 'blank',
+    },
+    // dashboard
+    {
+        path: '/dashboard',
         element: <Index />,
     },
     // {

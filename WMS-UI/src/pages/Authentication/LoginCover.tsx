@@ -13,6 +13,10 @@ import IconFacebookCircle from '../../components/Icon/IconFacebookCircle';
 import IconTwitter from '../../components/Icon/IconTwitter';
 import IconGoogle from '../../components/Icon/IconGoogle';
 
+// In dev mode, Vite proxy forwards /api to the backend (see vite.config.ts)
+// In production, the app is served from the same origin as the API
+const API_URL = '';
+
 const LoginCover = () => {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -31,9 +35,55 @@ const LoginCover = () => {
     };
     const [flag, setFlag] = useState(themeConfig.locale);
 
-    const submitForm = () => {
-        navigate('/');
+    // Form state
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const submitForm = async (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log('=== LOGIN FORM SUBMITTED ===');
+        console.log('Email:', email);
+        console.log('Password:', password ? '***provided***' : '***empty***');
+        setErrorMessage('');
+        setIsLoading(true);
+
+        const url = `${API_URL}/api/authentication/login`;
+        const payload = { userName: email, password: password };
+        console.log('Calling API:', url);
+        console.log('Payload:', JSON.stringify(payload));
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            console.log('Response status:', response.status);
+            const data = await response.json();
+            console.log('Response data:', data);
+
+            if (response.ok && data.isAuthSuccessful) {
+                // Store the JWT token
+                localStorage.setItem('token', data.token);
+                // Navigate to the dashboard
+                navigate('/dashboard');
+            } else {
+                // Show error from the API response
+                setErrorMessage(data.errorMessage || 'Invalid email or password. Please try again.');
+            }
+        } catch (error) {
+            console.error('Login fetch error:', error);
+            setErrorMessage('Unable to connect to the server. Please check if the API is running.');
+        } finally {
+            setIsLoading(false);
+        }
     };
+
 
     return (
         <div>
@@ -107,11 +157,24 @@ const LoginCover = () => {
                                 <h1 className="text-3xl font-extrabold uppercase !leading-snug text-primary md:text-4xl">Sign in</h1>
                                 <p className="text-base font-bold leading-normal text-white-dark">Enter your email and password to login</p>
                             </div>
+                            {errorMessage && (
+                                <div className="mb-4 rounded-md border border-danger bg-danger/10 p-3 text-sm text-danger">
+                                    {errorMessage}
+                                </div>
+                            )}
                             <form className="space-y-5 dark:text-white" onSubmit={submitForm}>
                                 <div>
-                                    <label htmlFor="Email">Email</label>
+                                    <label htmlFor="UserName">UserName</label>
                                     <div className="relative text-white-dark">
-                                        <input id="Email" type="email" placeholder="Enter Email" className="form-input ps-10 placeholder:text-white-dark" />
+                                        <input
+                                            id="UserName"
+                                            type="text"
+                                            placeholder="Enter UserName"
+                                            className="form-input ps-10 placeholder:text-white-dark"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                        />
                                         <span className="absolute start-4 top-1/2 -translate-y-1/2">
                                             <IconMail fill={true} />
                                         </span>
@@ -120,7 +183,15 @@ const LoginCover = () => {
                                 <div>
                                     <label htmlFor="Password">Password</label>
                                     <div className="relative text-white-dark">
-                                        <input id="Password" type="password" placeholder="Enter Password" className="form-input ps-10 placeholder:text-white-dark" />
+                                        <input
+                                            id="Password"
+                                            type="password"
+                                            placeholder="Enter Password"
+                                            className="form-input ps-10 placeholder:text-white-dark"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                            required
+                                        />
                                         <span className="absolute start-4 top-1/2 -translate-y-1/2">
                                             <IconLockDots fill={true} />
                                         </span>
@@ -129,11 +200,25 @@ const LoginCover = () => {
                                 <div>
                                     <label className="flex cursor-pointer items-center">
                                         <input type="checkbox" className="form-checkbox bg-white dark:bg-black" />
-                                        <span className="text-white-dark">Subscribe to weekly newsletter</span>
+                                        <span className="text-white-dark">Remember me</span>
                                     </label>
                                 </div>
-                                <button type="submit" className="btn btn-gradient !mt-6 w-full border-0 uppercase shadow-[0_10px_20px_-10px_rgba(67,97,238,0.44)]">
-                                    Sign in
+                                <button
+                                    type="submit"
+                                    className="btn btn-gradient !mt-6 w-full border-0 uppercase shadow-[0_10px_20px_-10px_rgba(67,97,238,0.44)]"
+                                    disabled={isLoading}
+                                >
+                                    {isLoading ? (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                            </svg>
+                                            Signing in...
+                                        </span>
+                                    ) : (
+                                        'Sign in'
+                                    )}
                                 </button>
                             </form>
 
@@ -188,7 +273,7 @@ const LoginCover = () => {
                                 </Link>
                             </div>
                         </div>
-                        <p className="absolute bottom-6 w-full text-center dark:text-white">© {new Date().getFullYear()}.VRISTO All Rights Reserved.</p>
+                        <p className="absolute bottom-6 w-full text-center dark:text-white">© {new Date().getFullYear()}.WMS All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
