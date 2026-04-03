@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
-    <ProjectReference Include="..\QuickStart.Presentation\QuickStart.Presentation.csproj" />
+    <ProjectReference Include="..\HRMS.Presentation\HRMS.Presentation.csproj" />
     <ProjectReference Include="..\Repository\Repository.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>

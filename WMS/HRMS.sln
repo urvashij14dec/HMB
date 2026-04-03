@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickStart", "QuickStart\QuickStart.csproj", "{B1ADED33-677F-4661-9C5E-3B57F5A8E087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRMS", "HRMS\HRMS.csproj", "{B1ADED33-677F-4661-9C5E-3B57F5A8E087}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{9CA344A9-6E96-4535-9B1B-918F10E135E5}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{84B7C5F7-B7B0-467E-A08E-A50917FA4F56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickStart.Presentation", "QuickStart.Presentation\QuickStart.Presentation.csproj", "{D41F36EF-2205-49CF-8AC6-67804DF84DAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRMS.Presentation", "HRMS.Presentation\HRMS.Presentation.csproj", "{D41F36EF-2205-49CF-8AC6-67804DF84DAE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{8E96E210-C24A-4523-A005-63CC61A10EC9}"
 EndProject

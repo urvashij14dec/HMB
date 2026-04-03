@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace QuickStart.Migrations
+namespace HRMS.Migrations
 {
     /// <inheritdoc />
     public partial class InitialData : Migration
