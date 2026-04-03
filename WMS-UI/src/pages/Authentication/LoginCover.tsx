@@ -12,10 +12,14 @@ import IconInstagram from '../../components/Icon/IconInstagram';
 import IconFacebookCircle from '../../components/Icon/IconFacebookCircle';
 import IconTwitter from '../../components/Icon/IconTwitter';
 import IconGoogle from '../../components/Icon/IconGoogle';
+import apiClient from '../../utils/apiClient';
 
-// In dev mode, Vite proxy forwards /api to the backend (see vite.config.ts)
-// In production, the app is served from the same origin as the API
-const API_URL = '';
+// Response type from AuthenticationController
+interface AuthResponse {
+    isAuthSuccessful: boolean;
+    errorMessage?: string;
+    token?: string;
+}
 
 const LoginCover = () => {
     const dispatch = useDispatch();
@@ -43,42 +47,29 @@ const LoginCover = () => {
 
     const submitForm = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('=== LOGIN FORM SUBMITTED ===');
-        console.log('Email:', email);
-        console.log('Password:', password ? '***provided***' : '***empty***');
         setErrorMessage('');
         setIsLoading(true);
 
-        const url = `${API_URL}/api/authentication/login`;
-        const payload = { userName: email, password: password };
-        console.log('Calling API:', url);
-        console.log('Payload:', JSON.stringify(payload));
-
         try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
+            const data = await apiClient.post<AuthResponse>('/api/authentication/login', {
+                userName: email,
+                password: password,
             });
 
-            console.log('Response status:', response.status);
-            const data = await response.json();
-            console.log('Response data:', data);
-
-            if (response.ok && data.isAuthSuccessful) {
+            if (data.isAuthSuccessful && data.token) {
                 // Store the JWT token
                 localStorage.setItem('token', data.token);
                 // Navigate to the dashboard
                 navigate('/dashboard');
             } else {
-                // Show error from the API response
-                setErrorMessage(data.errorMessage || 'Invalid email or password. Please try again.');
+                setErrorMessage(data.errorMessage || 'Invalid username or password. Please try again.');
             }
-        } catch (error) {
-            console.error('Login fetch error:', error);
-            setErrorMessage('Unable to connect to the server. Please check if the API is running.');
+        } catch (error: any) {
+            if (error?.data?.errorMessage) {
+                setErrorMessage(error.data.errorMessage);
+            } else {
+                setErrorMessage('Unable to connect to the server. Please check if the API is running.');
+            }
         } finally {
             setIsLoading(false);
         }
