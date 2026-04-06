@@ -1,9 +1,9 @@
-namespace Entities.Exceptions.Organisation
+namespace Entities.Exceptions.MCompany
 {
-    public sealed class OrganisationNotFoundException : NotFoundException
+    public sealed class MCompanyNotFoundException : NotFoundException
     {
-        public OrganisationNotFoundException(int organisationId)
-            : base($"The organisation with id: {organisationId} doesn't exist in the database.")
+        public MCompanyNotFoundException(int companyId)
+            : base($"The company with id: {companyId} doesn't exist in the database.")
         {
         }
     }

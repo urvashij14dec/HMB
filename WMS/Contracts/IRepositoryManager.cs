@@ -5,7 +5,7 @@
         IAuditRepository Audit { get; }
         ICustomerRepository Customer { get; }
         IAccountRepository Account { get; }
-        IOrganisationRepository Organisation { get; }
+        IMCompanyRepository MCompany { get; }
         Task SaveAsync();
     }
 }

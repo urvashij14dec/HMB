@@ -1,6 +1,6 @@
 ﻿{
    "CodeGenerationMode": 4,
-   "ContextClassName": "OSIHRMSContext",
+   "ContextClassName": "RepositoryContext",
    "ContextNamespace": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
@@ -19,12 +19,1868 @@
    "T4TemplatePath": null,
    "Tables": [
       {
-         "Name": "[dbo].[M_Organisation]",
+         "Name": "[dbo].[AllDatatoUpdateSK]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[sp_Organisation]",
-         "ObjectType": 1
+         "Name": "[dbo].[Bank_Enclosures]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank_InspectionStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank_InsProjectComponents]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank_Mast_Enclosure]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank_Mast_InsAppCompnent]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank_Mast_InsAppStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank_TermLoan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Budget_S_ToGL_MapingTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cctrn]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CEMPTRAN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CEMPTRAN_27092023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CEMPTRAN_Bak_JanuaryData_27032023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CEMPTRAN_LOG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CEMPTRAN_TEMP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Center_Budget_targets]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ChatDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ChatMsg]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ChatUserDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[childTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CityMaster]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CompanyInformation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ComplaintInformation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CS_Comp_Error_Log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DA_ARREAR_ORDER]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DAArrearTempTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dcatgmst]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DDOLocationWise]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dispmst]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[District_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DMMST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[docmst]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dtrnlog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Emp_Attendance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EMP_SALARY_STRUCTURE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EMP_SALARY_STRUCTURE_Bak_Jan2023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EMP_SALARY_STRUCTURE_HIST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EMP_SALARY_STRUCTURE_LOG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EMP_SALARY_STRUCTURE_old]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Emp_StopSalary_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Emp_Stopsalary_Mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmployeeHINDI]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Encashment_leave_apply]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EPF_Cov]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExtraPay_T_Mannual]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExtraPay_T_Mannual_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExtraPay_T_Mannual_Detail_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExtraPay_T_Mannual_Detail_old]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExtraPay_T_Mannual_old]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fa_accenter_codes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FA_ASSET_WorkBench]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fa_BnkStmt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FA_FIXED_DETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FA_FIXEDASSET_CATEGORY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FA_FIXEDASSET_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FA_FIXEDASSET_SUBCATEGORY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Fa_MHousingAssociation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Fa_MSupplier]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fa_TDS_Deposit_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fa_TDS_Deposit_Head]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fa_users_access]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fay_bankstmthead]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fay_opening_balance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Fay_Scheme_Budget]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fay_voucher_detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fay_voucherhead]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[filecontrn]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[filemst]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FMS_User_Authority]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FORM16]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Fund_request_center]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GLALLOCATION0509]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GPF]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HBA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hill_Compensation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HindiDes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HIST_M_EMP_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hits]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HRA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IncomeTaxChallanEntry_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IncomeTaxChallanEntry_Mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvalidCredentialsLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IT_CALC]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[landdocu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[logintrn]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LogTable_PaymentChangeInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ABSENTEEISM]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_AbsenteesSalary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_AbsenteesSalary_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ACCO_TYPE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_AdvertisementDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Area]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Bank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Block]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_BOQ]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_C_DESG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Caste]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Cat_Wise_OT_Rate_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_CATEGORY_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_CenterWiseGLAllocation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Cheque]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_City]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Company]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Contractor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_CTAAllowanceLocation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_CTARateFor7pay]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_DA_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_DA_MAST_7PAY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Department]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_DEPT_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_DEPU_ALL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Deputation_Allowance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_DESIGNATION_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_DESIGNATION_MAST_bak_27032023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_District]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Double_Hra_Employees]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Double_TPT_Employees]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EDU_Allowance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EMP_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EMP_MAST_ADD_DETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[m_emp_mast_BeforePorting]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EMP_MAST_E00259]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EMP_MAST_january_2023_Bak]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EMP_MAST_LOG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EMP_Transfer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EmployeeClassDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EmpType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EPF]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_EST_CAT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ExtraPayType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_FAMILY_DETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Financial_Year]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Floor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_GL_Code]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_GPF_GSS_LeaveEncashBal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_GPF_RATE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_GradePay]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_GratuityContributionRate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Group_master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_GroupOfService]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Holiday]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_HolidayEmpMapping]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_HRA_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_HRA_TYPE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_HRARate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_HRARate7PAy]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Income_Tax_Section]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Income_Tax_Slab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_INCREMENT_TABLE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_INCREMENT_TABLE_LOG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_INSTRUMENT_TYPE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ITCalculation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ITCalculation_Challan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ITCalculation_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ITCalculation_Head]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ITSLAB]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LAON_MASt_08112019]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Last_C_Details]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Last_C_Premium]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LastPay_C]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_leaveEncashmentRate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LeaveHead]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LeavePurpose]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LeavePurposeData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LeavesBreakUp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LIC_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LOAN_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LOAN_MAST_BeforeFrezee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LOAN_MAST1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LOAN_MAST11]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_LOAN_TYPES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_MainGroupMaster]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Module_Mas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ModuleMenu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_MonthYear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_NOMINEE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Officiating_Allowance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ORD_DETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_OT_Cat_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PARAM_ID]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PARAM_SUBID]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ParkingType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Party]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PayBand]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PaymentMode]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PENSION_FAMILY_DETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PENSION_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PENSION_NOMINEE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PENSION_STRUCTURE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_PensionContributionRate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Priority]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Project]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_ReciptsPayment_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Region]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Relation_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_REMOTE_ALLOWANCE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_SAL_CODE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_SCALE_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Scheme_Heads]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Schemes_Mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Section]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_SeventhPayLavel]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_SL_CODE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_SL_Type]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Sub_group]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_TA_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_TDS_Rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_TransportAllowance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Unit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_UOM]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Work_Item]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Work_Item_Type]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_Zone]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MaintenanceCharge$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_applicationStage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_bank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_bank_noexist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_bankBrach]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_beneficiary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_cast_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_ChamberNo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_cheque_status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_commodity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_ConstitutionUnit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_Corps_Mesurment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_Corps_units]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_cropCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_cropCategory_sthort]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_CS_MISReportdetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_district]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_district_sthort]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_Document]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_email]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_entry_page]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_entry_page_ConfirmLogi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_financial_year]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_gpf_contribution]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_LetterReport]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_location]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_LOI_Status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_menumaster]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_MenuNames]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_Message]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_MISReportDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_Months]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_months_emptyedate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_months_emptysdate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_months_potatoinedate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_months_potatoinsdate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_months_potatooutedate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_months_potatooutsdate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_NHB_Branch]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_normative_cost]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_Others]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_PaymentStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_project_statges]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_project_status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_projectComponent]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_Query]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_SearchCriteria]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_SearchCriteria_Decision]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_section]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_state]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_state_sthort]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_subsidy_status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_SubsidyDynamicQuery]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_tblCropsActivity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_tblCropsActivity_sthort]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_Teshil]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_teshil_sthort]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mast_TransactionDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_user_Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_variety]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_years]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mast_yearsSTHORt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Master_NHBPaymentDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[master_QueryCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[master_SubQueryCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mbank0509]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MDeductorMaster]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MERGED12May]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Merged14052014]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MIS_tblCentre]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mis_tblVariety]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mis_view_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mis_view_center]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mis_view_commodity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mis_view_state]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mis_view_variety]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Module_Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NOTING_MAST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OTP_Verification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[P_GEN_PARAM_SAL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[P_MTHLYSAL_PARAM]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PAY_COMM_detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PAY_COMM_HEAD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PayBillHistDeputionEmolyeeSalary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaymentDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PENSION]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PM_SendOnlineSMS_Email]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PM_tblyear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[psb_allocation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[quest_categories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[REPORT_TEMP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[retDt09032019$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role_master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role_menu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role_Wise_Menu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RoleClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[roles_backup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RTI_Error_Log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RTI_mast_SearchCriteria]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RTI_mast_Status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RTI_Tran_action_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RTI_tran_application_data]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rti_tran_event_history]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RTI_Tran_Status_History]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Schdule_def_child]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Schedule]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Schedule_Def_parent1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Schedule_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Schedule3]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Scheme_Group_Mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SearchCriteria_second]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sectionmst]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SerachCriteriaProjectCost]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[setup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[seventhPayArrearTempTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Sheet1$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[State_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[STHort_Error_Log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[STHort_InsertData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sthort_Insertlog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sthort_state]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[STHort_transaction_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[stHort_TransactionTab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Supp_SalaryGen_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Supp_SalaryGen_Mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sysdiagrams]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_AbsentManagement]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_ARREARDETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_ARREARHEAD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_ArrearTemTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_BONUS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_DAArrear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_DAArrearDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_DAArrearDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_EmplopyeePromotionalDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Employee_Wise_OT_Child]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Employee_Wise_OT_Child_OLD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Employee_Wise_OT_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Employee_Wise_OT_Master_old]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_EmployeePromotional]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_EmployeeSalaryRemark]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Fay_Bill_Expenses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Fay_Bill_Expenses1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Fay_Bill_Originating]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Fay_Bill_Responding]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Form16]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_IncrementArrear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_IncrementArrearDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_IncrementArrearOld]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_IT_Advance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LeaveApplication]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LeaveApplicationChild]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_leaveapplicationrhcomp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LeaveDocDtls]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LeavesAllotted]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LeavesOpening]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LeaveTaken_PreYear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_LN_STOP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_Medical_Bill_Payment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_MTH_SALARY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_MTH_Salary_30112023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_MTH_SALARY_MODIFICATION]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_MTH_SALARY_TEMP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HIST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HIST_30112023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISt_InvalidSalary_19092019]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HIST_temp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumary_06022020_year_2014_2019]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumary_TEMP_USE_IN_MAIN_SALRY_DEPTWISE_GEN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumary_TEMP_USE_IN_MAIN_SALRY_GEN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumary_TEMP_USE_IN_SUP_SALRY_DEPTWISE_GEN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumary_TEMP_USE_IN_SUP_SALRY_GEN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumaryDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumaryDetail_06022020_year_2014_2019]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumaryTemp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_HISTSumaryTempDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PAYBILL_M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PromotionalArrear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_PromotionalArrearDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_reimbursement_Noting]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_RevisedPaySlipDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_RevisedPaySlipDetail_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_RevisedSeventhPAYArrear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_RevisedSeventhPAYArrearDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SAL_TRANS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SAL_USR_ENTRY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SAL_USR_ENTRY_CHLD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SeventhPAYArrear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SeventhPAYArrearDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SeventhPAYArrearDetail_PaymentUnfreeze]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SuspendSalary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_SuspendSalary_Detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[T_UnfrezzSalaryRecordes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temp_Debit_Credit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temp_increment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temp_payment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TEMP_PRAN_SEP_2020]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TEMP_PROJCODE_REUSE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temp_receipt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Temp_RevisedseventhPayArrearTempTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Temp_Tab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Temp_UpdateGpfNumber]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TEMP1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TempLIC_27052021]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TMP_DA_ARREAR]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_nps]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TMP_PER_PAY_ARREAR]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Trial_Balance_OtherthanJV]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TrialBalance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEDA_PIU]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEDA_Regular_feb_2023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEDA_RegularEmployee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEDA_SamvidaEmployee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEEDA_FEB_Designation_List]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEEDA_FunctionLocations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPEEDA_TEMP_EMPLOYEELEVELCODE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPPEDA_FEB_EmployeeMaster]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPPEDA_FEB_EmployeeMaster_MisingBasic]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPPEDA_FebPIUSalary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPPEDA_FebRegualSalary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UPPEDA_FebSambidaSalary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User_module_roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User_Modules]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[userinsections]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserLogins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[usermst]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UsersCurrentActivity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTokens]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_MEmployeeUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_MenuMaster]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_MRole]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_MUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_NoticeEntry]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_RoleVsMenu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_UserVsCompany]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_UserVsCompDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_UserVsRole]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utility_UserVsRoleDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Utlity_LoginHistry]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VoucherUpload]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_MembershipUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_Profiles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_Users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_UsersInRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_WebPartState_Paths]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_WebPartState_Shared]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_aspnet_WebPartState_User]",
+         "ObjectType": 0
       }
    ],
    "UiHint": null,

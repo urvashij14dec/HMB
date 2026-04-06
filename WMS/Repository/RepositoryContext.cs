@@ -60,86 +60,52 @@ namespace Repository
             modelBuilder.ApplyConfiguration(new AccountConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             //  modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.Entity<MOrganisation>(entity =>
-            {
-                entity.HasKey(e => e.TableId);
 
-                entity.ToTable("M_Organisation");
-
-                entity.Property(e => e.TableId).HasColumnName("TableID");
-                entity.Property(e => e.Address)
-                    .HasMaxLength(150)
-                    .IsUnicode(false);
-                entity.Property(e => e.Ceoname)
-                    .HasMaxLength(64)
-                    .IsUnicode(false)
-                    .HasColumnName("CEOName");
-                entity.Property(e => e.Contact)
-                    .HasMaxLength(64)
-                    .IsUnicode(false);
-                entity.Property(e => e.CreatedBy)
-                    .IsRequired()
-                    .HasMaxLength(32);
-                entity.Property(e => e.CreatedDate)
-                    .HasDefaultValueSql("(getdate())")
-                    .HasAnnotation("Relational:DefaultConstraintName", "DF_M_Organisation_CreatedDate")
-                    .HasColumnType("datetime");
-                entity.Property(e => e.Email)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-                entity.Property(e => e.Fax)
-                    .HasMaxLength(20)
-                    .IsUnicode(false)
-                    .HasColumnName("fax");
-                entity.Property(e => e.Logo)
-                    .HasMaxLength(250)
-                    .IsUnicode(false);
-                entity.Property(e => e.LogoName)
-                    .HasMaxLength(500)
-                    .IsUnicode(false);
-                entity.Property(e => e.Mobile)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(128)
-                    .IsUnicode(false);
-                entity.Property(e => e.Pan)
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .HasColumnName("PAN");
-                entity.Property(e => e.Phone)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-                entity.Property(e => e.RegistrationDt).HasColumnType("datetime");
-                entity.Property(e => e.RegistrationNum)
-                    .HasMaxLength(16)
-                    .IsUnicode(false);
-                entity.Property(e => e.SelfFlag)
-                    .HasMaxLength(1)
-                    .IsUnicode(false)
-                    .IsFixedLength()
-                    .HasComment("'1' --> Identifies MAP_IT entry, null or '0' --> Identifies other government departments entries");
-                entity.Property(e => e.Shname)
-                    .IsRequired()
-                    .HasMaxLength(8)
-                    .IsUnicode(false)
-                    .HasColumnName("SHName");
-                entity.Property(e => e.UpdatedBy).HasMaxLength(32);
-                entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
-                entity.Property(e => e.Website)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("website");
-            });
 
             //OnModelCreatingPartial(modelBuilder);
+
+            modelBuilder.Entity<MCompany>(entity =>
+            {
+                entity.HasKey(e => e.CompCode);
+
+                entity.ToTable("M_Company");
+
+                entity.Property(e => e.CompCode)
+                    .HasMaxLength(3)
+                    .IsUnicode(false)
+                    .IsFixedLength();
+                entity.Property(e => e.Cdate)
+                    .HasDefaultValueSql("(getdate())")
+                    .HasAnnotation("Relational:DefaultConstraintName", "DF_M_Company_CDate")
+                    .HasColumnType("datetime")
+                    .HasColumnName("CDate");
+                entity.Property(e => e.CompanyAddress).HasMaxLength(200);
+                entity.Property(e => e.CompanyDesc)
+                    .IsRequired()
+                    .HasMaxLength(256)
+                    .IsUnicode(false);
+                entity.Property(e => e.Panno)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("PANNO");
+                entity.Property(e => e.Pin)
+                    .HasMaxLength(8)
+                    .IsUnicode(false)
+                    .HasColumnName("PIN");
+                entity.Property(e => e.TableId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("tableID");
+                entity.Property(e => e.Tanno)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("TANNO");
+            });
 
         }
         public DbSet<AuditLog> AuditLogs { get; set; } = default!;
         public DbSet<Customer>? Customers { get; set; }
         public DbSet<Account>? Accounts { get; set; }
-        public virtual DbSet<MOrganisation> MOrganisations { get; set; }
+        public virtual DbSet<MCompany> MCompanys { get; set; }
 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

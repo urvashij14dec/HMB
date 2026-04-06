@@ -67,8 +67,10 @@ const LoginCover = () => {
         } catch (error: any) {
             if (error?.data?.errorMessage) {
                 setErrorMessage(error.data.errorMessage);
+            } else if (error?.data?.message) {
+                setErrorMessage(`Server error: ${error.data.message.substring(0, 50)}...`);
             } else {
-                setErrorMessage('Unable to connect to the server. Please check if the API is running.');
+                setErrorMessage('Unable to connect to the server. Please check if the API is running or if the proxy is correctly configured.');
             }
         } finally {
             setIsLoading(false);

@@ -10,7 +10,7 @@ namespace Repository
         private readonly Lazy<ICustomerRepository> _customerRepository;
         private readonly Lazy<IAccountRepository> _accountRepository;
         private readonly Lazy<IAuditRepository> _auditRepository;
-        private readonly Lazy<IOrganisationRepository> _organisationRepository;
+        private readonly Lazy<IMCompanyRepository> _companyRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext, RoleManager<UserRole> roleManager)
         {
@@ -18,7 +18,7 @@ namespace Repository
             _customerRepository = new Lazy<ICustomerRepository>(() => new CustomerRepository(repositoryContext));
             _accountRepository = new Lazy<IAccountRepository>(() => new AccountRepository(repositoryContext));
             _auditRepository = new Lazy<IAuditRepository>(() => new AuditRepository(repositoryContext));
-            _organisationRepository= new Lazy<IOrganisationRepository>(() => new OrganisationRepository(repositoryContext));
+            _companyRepository= new Lazy<IMCompanyRepository>(() => new MCompanyRepository(repositoryContext));
 
         }
 
@@ -26,7 +26,7 @@ namespace Repository
         public ICustomerRepository Customer => _customerRepository.Value;
         public IAccountRepository Account => _accountRepository.Value;
         public IAuditRepository Audit => _auditRepository.Value;
-        public IOrganisationRepository Organisation => _organisationRepository.Value;
+        public IMCompanyRepository MCompany => _companyRepository.Value;
         #endregion
 
 

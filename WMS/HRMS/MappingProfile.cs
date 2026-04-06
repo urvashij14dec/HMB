@@ -7,7 +7,7 @@ using Shared.DataTransferObjects.Authentication;
 using Shared.DataTransferObjects.Customer;
 using Shared.DataTransferObjects.User;
 using Shared.DataTransferObjects.UserRole;
-using Shared.DataTransferObjects.Organisation;
+using Shared.DataTransferObjects.MCompany;
 
 namespace WMS
 {
@@ -32,10 +32,10 @@ namespace WMS
             CreateMap<UserRoleForUpdateDto, UserRole>();
             CreateMap<AuditLog, AuditLogDto>();
 
-            // Organisation mappings
-            CreateMap<MOrganisation, OrganisationDto>();
-            CreateMap<OrganisationForCreationDto, MOrganisation>();
-            CreateMap<OrganisationForUpdateDto, MOrganisation>();
+            // MCompany mappings
+            CreateMap<MCompany, MCompanyDto>();
+            CreateMap<MCompanyForCreationDto, MCompany>();
+            CreateMap<MCompanyForUpdateDto, MCompany>();
         }
     }
 }

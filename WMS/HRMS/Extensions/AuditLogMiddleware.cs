@@ -1,6 +1,7 @@
-using Entities.Models;
+using Repository.Models;
 using Repository;
 using System.Text;
+using Entities.Models;
 
 namespace WMS.Extensions
 {

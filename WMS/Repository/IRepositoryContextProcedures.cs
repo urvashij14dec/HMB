@@ -14,6 +14,6 @@ namespace Repository.Models
 {
     public partial interface IRepositoryContextProcedures
     {
-        Task<List<sp_OrganisationResult>> sp_OrganisationAsync(int? spType, string name, string sHName, string cEOName, string registrationNum, DateTime? registrationDt, string pAN, string address, string phone, string mobile, string email, string logo, string logoName, string createdBy, string updatedBy, DateTime? createdDate, DateTime? updatedDate, string fax, string website, OutputParameter<int?> tableId, OutputParameter<string> msg, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+       
     }
 }

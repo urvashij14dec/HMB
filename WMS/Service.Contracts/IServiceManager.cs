@@ -8,6 +8,6 @@ namespace Service.Contracts
         IAccountService AccountService { get; }
         IUserService UserService { get; }
         IRoleService RoleService { get; }
-        IOrganisationService OrganisationService { get; }
+        IMCompanyService MCompanyService { get; }
     }
 }
