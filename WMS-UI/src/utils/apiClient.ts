@@ -45,8 +45,14 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
         throw new Error('Session expired. Please login again.');
     }
 
-    // Parse response
-    const data = await response.json();
+    let data: any;
+    const contentType = response.headers.get('content-type');
+    
+    if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+    } else {
+        data = { message: await response.text() };
+    }
 
     if (!response.ok) {
         throw { status: response.status, data };
