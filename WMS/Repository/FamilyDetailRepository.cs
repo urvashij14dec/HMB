@@ -16,7 +16,7 @@ namespace Repository
                 .OrderBy(f => f.PersonName)
                 .ToListAsync();
 
-        public async Task<MFamilyDetail> GetByIdAsync(int rowId, bool trackChanges) =>
+        public async Task<MFamilyDetail?> GetByIdAsync(int rowId, bool trackChanges) =>
             await FindByCondition(f => f.RowId.Equals(rowId), trackChanges)
                 .SingleOrDefaultAsync();
 

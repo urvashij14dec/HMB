@@ -964,8 +964,8 @@ namespace Repository
             modelBuilder.Entity<EmpSalaryStructure>(entity =>
             {
                 entity
-                    .HasNoKey()
-                    .ToTable("EMP_SALARY_STRUCTURE", tb => tb.HasTrigger("EMP_SALARY_STRUCTURE_insertupadete"));
+                    .HasKey(e => e.TabId);
+                entity.ToTable("EMP_SALARY_STRUCTURE", tb => tb.HasTrigger("EMP_SALARY_STRUCTURE_insertupadete"));
 
                 entity.HasIndex(e => e.Ecode, "ClusteredIndex-20150211-220058").IsClustered();
 

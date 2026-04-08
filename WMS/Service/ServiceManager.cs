@@ -22,6 +22,7 @@ namespace Service
         private readonly Lazy<IEmployeeService> _employeeService;
         private readonly Lazy<INomineeService> _nomineeService;
         private readonly Lazy<IFamilyDetailService> _familyDetailService;
+        private readonly Lazy<ISalaryService> _salaryService;
 
         public ServiceManager(IRepositoryManager repositoryManager,
               ILoggerManager logger, IMapper mapper,
@@ -41,6 +42,7 @@ namespace Service
             _employeeService = new Lazy<IEmployeeService>(() => new EmployeeService(repositoryManager, mapper));
             _nomineeService = new Lazy<INomineeService>(() => new NomineeService(repositoryManager, mapper));
             _familyDetailService = new Lazy<IFamilyDetailService>(() => new FamilyDetailService(repositoryManager, mapper));
+            _salaryService = new Lazy<ISalaryService>(() => new SalaryService(repositoryManager, mapper));
         }
 
         public ICustomerService CustomerService => _customerService.Value;
@@ -54,6 +56,7 @@ namespace Service
         public IEmployeeService EmployeeService => _employeeService.Value;
         public INomineeService NomineeService => _nomineeService.Value;
         public IFamilyDetailService FamilyDetailService => _familyDetailService.Value;
+        public ISalaryService SalaryService => _salaryService.Value;
 
     }
 }

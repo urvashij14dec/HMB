@@ -15,6 +15,7 @@ namespace Repository
         private readonly Lazy<IEmployeeRepository> _employeeRepository;
         private readonly Lazy<INomineeRepository> _nomineeRepository;
         private readonly Lazy<IFamilyDetailRepository> _familyDetailRepository;
+        private readonly Lazy<ISalaryRepository> _salaryRepository;
 
        
         public RepositoryManager(
@@ -55,6 +56,10 @@ namespace Repository
             _familyDetailRepository =
                 new Lazy<IFamilyDetailRepository>(
                     () => new FamilyDetailRepository(_repositoryContext));
+
+            _salaryRepository =
+                new Lazy<ISalaryRepository>(
+                    () => new SalaryRepository(_repositoryContext));
         }
 
         #region Repository Accessors
@@ -66,6 +71,7 @@ namespace Repository
         public IEmployeeRepository Employee => _employeeRepository.Value;
         public INomineeRepository Nominee => _nomineeRepository.Value;
         public IFamilyDetailRepository FamilyDetail => _familyDetailRepository.Value;
+        public ISalaryRepository Salary => _salaryRepository.Value;
         #endregion
 
         public async Task SaveAsync() =>

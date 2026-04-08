@@ -57,6 +57,11 @@ namespace WMS
             CreateMap<MFamilyDetail, Shared.DataTransferObjects.FamilyDetail.FamilyDetailDto>();
             CreateMap<Shared.DataTransferObjects.FamilyDetail.FamilyDetailForCreationDto, MFamilyDetail>();
             CreateMap<Shared.DataTransferObjects.FamilyDetail.FamilyDetailForUpdateDto, MFamilyDetail>();
+
+            // Salary mappings
+            CreateMap<EmpSalaryStructure, Shared.DataTransferObjects.Salary.SalaryDto>();
+            CreateMap<Shared.DataTransferObjects.Salary.SalaryForCreationDto, EmpSalaryStructure>();
+            CreateMap<Shared.DataTransferObjects.Salary.SalaryForUpdateDto, EmpSalaryStructure>();
         }
     }
 }

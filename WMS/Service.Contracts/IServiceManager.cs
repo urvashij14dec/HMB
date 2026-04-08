@@ -14,5 +14,6 @@ namespace Service.Contracts
         IEmployeeService EmployeeService { get; }
         INomineeService NomineeService { get; }
         IFamilyDetailService FamilyDetailService { get; }
+        ISalaryService SalaryService { get; }
     }
 }
