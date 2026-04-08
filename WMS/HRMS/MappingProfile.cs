@@ -43,6 +43,11 @@ namespace WMS
             CreateMap<DesignationForCreationDto, MDesignationMast>();
             CreateMap<DesignationForUpdateDto, MDesignationMast>();
 
+            // Employee mappings
+            CreateMap<MEmpMast, Shared.DataTransferObjects.Employee.EmployeeDto>();
+            CreateMap<Shared.DataTransferObjects.Employee.EmployeeForCreationDto, MEmpMast>();
+            CreateMap<Shared.DataTransferObjects.Employee.EmployeeForUpdateDto, MEmpMast>();
+
         }
     }
 }

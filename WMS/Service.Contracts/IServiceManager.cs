@@ -11,5 +11,6 @@ namespace Service.Contracts
         IMCompanyService MCompanyService { get; }
 
         IDesignationService DesignationService { get; }
+        IEmployeeService EmployeeService { get; }
     }
 }

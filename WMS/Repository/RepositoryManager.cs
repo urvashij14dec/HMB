@@ -1,4 +1,4 @@
-﻿using Contracts;
+using Contracts;
 using Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 
@@ -12,6 +12,7 @@ namespace Repository
         private readonly Lazy<IAuditRepository> _auditRepository;
         private readonly Lazy<IMCompanyRepository> _companyRepository;
         private readonly Lazy<IDesignationRepository> _designationRepository;
+        private readonly Lazy<IEmployeeRepository> _employeeRepository;
 
        
         public RepositoryManager(
@@ -40,6 +41,10 @@ namespace Repository
             _designationRepository =
                 new Lazy<IDesignationRepository>(
                     () => new DesignationRepository(_repositoryContext));
+
+            _employeeRepository =
+                new Lazy<IEmployeeRepository>(
+                    () => new EmployeeRepository(_repositoryContext));
         }
 
         #region Repository Accessors
@@ -48,6 +53,7 @@ namespace Repository
         public IAuditRepository Audit => _auditRepository.Value;
         public IMCompanyRepository MCompany => _companyRepository.Value;
         public IDesignationRepository Designation => _designationRepository.Value;
+        public IEmployeeRepository Employee => _employeeRepository.Value;
         #endregion
 
         public async Task SaveAsync() =>

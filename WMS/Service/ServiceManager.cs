@@ -19,6 +19,7 @@ namespace Service
         private readonly Lazy<IAuditService> _auditService;
         private readonly Lazy<IMCompanyService> _companyService;
         private readonly Lazy<IDesignationService> _designationService;
+        private readonly Lazy<IEmployeeService> _employeeService;
 
         public ServiceManager(IRepositoryManager repositoryManager,
               ILoggerManager logger, IMapper mapper,
@@ -35,6 +36,7 @@ namespace Service
             _auditService = new Lazy<IAuditService>(() => new AuditService(repositoryManager, logger, mapper));
             _companyService = new Lazy<IMCompanyService>(() => new MCompanyService(repositoryManager, logger, mapper));
             _designationService = new Lazy<IDesignationService>(() => new DesignationService(repositoryManager, mapper));
+            _employeeService = new Lazy<IEmployeeService>(() => new EmployeeService(repositoryManager, mapper));
         }
 
         public ICustomerService CustomerService => _customerService.Value;
@@ -45,6 +47,7 @@ namespace Service
         public IAuditService AuditService => _auditService.Value;
         public IMCompanyService MCompanyService => _companyService.Value;
         public IDesignationService DesignationService => _designationService.Value;
+        public IEmployeeService EmployeeService => _employeeService.Value;
 
     }
 }

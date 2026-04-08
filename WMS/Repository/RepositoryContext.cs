@@ -58,8 +58,8 @@ namespace Repository
             modelBuilder.Entity<MEmpMast>(entity =>
             {
                 entity
-                    .HasNoKey()
-                    .ToTable("M_EMP_MAST", tb => tb.HasTrigger("M_EMP_MAST_UPDATED"));
+                    .HasKey(e => e.Ecode);
+                entity.ToTable("M_EMP_MAST", tb => tb.HasTrigger("M_EMP_MAST_UPDATED"));
 
                 entity.HasIndex(e => e.Ecode, "ClusteredIndex-20150211-221235").IsClustered();
 

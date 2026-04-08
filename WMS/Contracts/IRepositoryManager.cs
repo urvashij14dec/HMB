@@ -1,4 +1,4 @@
-﻿namespace Contracts
+namespace Contracts
 {
     public interface IRepositoryManager
     {
@@ -7,6 +7,7 @@
         IAccountRepository Account { get; }
         IMCompanyRepository MCompany { get; }
         IDesignationRepository Designation { get; }
+        IEmployeeRepository Employee { get; }
         Task SaveAsync();
     }
 }
