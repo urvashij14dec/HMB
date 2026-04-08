@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /WMS/TempScaffold
 /.gitignore
+ 
+/WMS/HRMS/internal_logs/internallog.txt
