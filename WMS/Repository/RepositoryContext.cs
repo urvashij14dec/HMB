@@ -58,8 +58,8 @@ namespace Repository
             modelBuilder.Entity<MEmpMast>(entity =>
             {
                 entity
-                    .HasKey(e => e.Ecode);
-                entity.ToTable("M_EMP_MAST", tb => tb.HasTrigger("M_EMP_MAST_UPDATED"));
+                    .HasNoKey()
+                    .ToTable("M_EMP_MAST", tb => tb.HasTrigger("M_EMP_MAST_UPDATED"));
 
                 entity.HasIndex(e => e.Ecode, "ClusteredIndex-20150211-221235").IsClustered();
 
@@ -684,6 +684,135 @@ namespace Repository
                     .HasMaxLength(5)
                     .IsUnicode(false)
                     .HasColumnName("Spouse_JobLocation");
+            });
+
+            modelBuilder.Entity<MFamilyDetail>(entity =>
+            {
+                entity.HasKey(e => new { e.Ecode, e.PersonName }).HasName("PKPERSON");
+
+                entity.ToTable("M_FAMILY_DETAIL");
+
+                entity.Property(e => e.Ecode)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("ECODE");
+                entity.Property(e => e.PersonName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("PERSON_NAME");
+                entity.Property(e => e.CreatedBy)
+                    .HasMaxLength(15)
+                    .IsUnicode(false);
+                entity.Property(e => e.Dependent)
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .IsFixedLength()
+                    .HasColumnName("DEPENDENT");
+                entity.Property(e => e.Dob).HasColumnName("DOB");
+                entity.Property(e => e.PersonStatus)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("PERSON_STATUS");
+                entity.Property(e => e.RelationWithEmp).HasColumnName("RELATION_WITH_EMP");
+                entity.Property(e => e.RowId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("Row_Id");
+                entity.Property(e => e.Sex)
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .HasColumnName("SEX");
+                entity.Property(e => e.UpdatedBy)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("UpdatedBY");
+            });
+
+            modelBuilder.Entity<MNominee>(entity =>
+            {
+                entity
+                    .HasKey(e => e.RowId);
+                entity.ToTable("M_NOMINEE");
+
+                entity.HasIndex(e => e.Ecode, "IX_M_NOMINEE").IsClustered();
+
+                entity.Property(e => e.Add1)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("ADD1");
+                entity.Property(e => e.Add2)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("ADD2");
+                entity.Property(e => e.Add3)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("ADD3");
+                entity.Property(e => e.AmtPercent)
+                    .HasColumnType("numeric(3, 0)")
+                    .HasColumnName("AMT_PERCENT");
+                entity.Property(e => e.Contigencies)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("CONTIGENCIES");
+                entity.Property(e => e.Dob).HasColumnName("DOB");
+                entity.Property(e => e.Ecode)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("ECODE");
+                entity.Property(e => e.MaritalStatus)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("MARITAL_STATUS");
+                entity.Property(e => e.NominationDt).HasColumnName("NOMINATION_DT");
+                entity.Property(e => e.NominationFor)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("NOMINATION_FOR");
+                entity.Property(e => e.NomineeName)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("NOMINEE_NAME");
+                entity.Property(e => e.NomineeStatus)
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .HasColumnName("NOMINEE_STATUS");
+                entity.Property(e => e.NxAdd1)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_ADD1");
+                entity.Property(e => e.NxAdd2)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_ADD2");
+                entity.Property(e => e.NxAdd3)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_ADD3");
+                entity.Property(e => e.NxDob).HasColumnName("NX_DOB");
+                entity.Property(e => e.NxMaritalStatus)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_MARITAL_STATUS");
+                entity.Property(e => e.NxNominee)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_NOMINEE");
+                entity.Property(e => e.NxNomineeStatus)
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_NOMINEE_STATUS");
+                entity.Property(e => e.NxRelationWithEmp)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("NX_RELATION_WITH_EMP");
+                entity.Property(e => e.RelationWithEmp)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("RELATION_WITH_EMP");
+                entity.Property(e => e.RowId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("Row_Id");
+                entity.Property(e => e.UpdatedBy).HasColumnName("UpdatedBY");
             });
 
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());

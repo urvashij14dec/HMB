@@ -48,6 +48,15 @@ namespace WMS
             CreateMap<Shared.DataTransferObjects.Employee.EmployeeForCreationDto, MEmpMast>();
             CreateMap<Shared.DataTransferObjects.Employee.EmployeeForUpdateDto, MEmpMast>();
 
+            // Nominee mappings
+            CreateMap<MNominee, Shared.DataTransferObjects.Nominee.NomineeDto>();
+            CreateMap<Shared.DataTransferObjects.Nominee.NomineeForCreationDto, MNominee>();
+            CreateMap<Shared.DataTransferObjects.Nominee.NomineeForUpdateDto, MNominee>();
+
+            // FamilyDetail mappings
+            CreateMap<MFamilyDetail, Shared.DataTransferObjects.FamilyDetail.FamilyDetailDto>();
+            CreateMap<Shared.DataTransferObjects.FamilyDetail.FamilyDetailForCreationDto, MFamilyDetail>();
+            CreateMap<Shared.DataTransferObjects.FamilyDetail.FamilyDetailForUpdateDto, MFamilyDetail>();
         }
     }
 }

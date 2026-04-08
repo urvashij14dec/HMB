@@ -8,6 +8,8 @@ namespace Contracts
         IMCompanyRepository MCompany { get; }
         IDesignationRepository Designation { get; }
         IEmployeeRepository Employee { get; }
+        INomineeRepository Nominee { get; }
+        IFamilyDetailRepository FamilyDetail { get; }
         Task SaveAsync();
     }
 }

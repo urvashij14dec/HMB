@@ -25,6 +25,14 @@
       {
          "Name": "[dbo].[M_EMP_MAST_ADD_DETAIL]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_FAMILY_DETAIL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[M_NOMINEE]",
+         "ObjectType": 0
       }
    ],
    "UiHint": null,

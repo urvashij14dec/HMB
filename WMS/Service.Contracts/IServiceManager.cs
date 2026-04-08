@@ -12,5 +12,7 @@ namespace Service.Contracts
 
         IDesignationService DesignationService { get; }
         IEmployeeService EmployeeService { get; }
+        INomineeService NomineeService { get; }
+        IFamilyDetailService FamilyDetailService { get; }
     }
 }
