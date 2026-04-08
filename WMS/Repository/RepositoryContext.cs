@@ -174,6 +174,314 @@ namespace Repository
                     .IsUnicode(true);
             });
 
+            modelBuilder.Entity<EmpAttendance>(entity =>
+            {
+                entity
+                    .HasNoKey()
+                    .ToTable("Emp_Attendance");
+
+                entity.Property(e => e.Company)
+                    .HasMaxLength(10)
+                    .IsFixedLength();
+                entity.Property(e => e.CreatedBy).HasMaxLength(500);
+                entity.Property(e => e.Ecode)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+                entity.Property(e => e.MonthDay).HasColumnName("Month_Day");
+                entity.Property(e => e.PresentAbsent)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Present_Absent");
+                entity.Property(e => e.Station)
+                    .HasMaxLength(50)
+                    .HasColumnName("STATION");
+                entity.Property(e => e.UpdatedBy).HasMaxLength(500);
+                entity.Property(e => e.Volume)
+                    .HasMaxLength(50)
+                    .HasColumnName("VOLUME");
+            });
+
+            modelBuilder.Entity<EmpSalaryStructure>(entity =>
+            {
+                entity
+                    .HasNoKey()
+                    .ToTable("EMP_SALARY_STRUCTURE", tb => tb.HasTrigger("EMP_SALARY_STRUCTURE_insertupadete"));
+
+                entity.HasIndex(e => e.Ecode, "ClusteredIndex-20150211-220058").IsClustered();
+
+                entity.Property(e => e.AccountNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("ACCOUNT_NO");
+                entity.Property(e => e.BalEarn)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("BAL_EARN");
+                entity.Property(e => e.BalGpf)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("BAL_GPF");
+                entity.Property(e => e.BalGss)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("BAL_GSS");
+                entity.Property(e => e.BankName)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("BANK_NAME");
+                entity.Property(e => e.Basic)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("BASIC");
+                entity.Property(e => e.Basic7pay)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("basic_7pay");
+                entity.Property(e => e.Basic7payJan16)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("basic7pay_jan16");
+                entity.Property(e => e.BasicOld)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("basic_old");
+                entity.Property(e => e.Branch)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("BRANCH");
+                entity.Property(e => e.CccDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CCC_DATE");
+                entity.Property(e => e.CccRate)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("CCC_RATE");
+                entity.Property(e => e.CccRate7pay)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("CCC_Rate_7pay");
+                entity.Property(e => e.CityAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("CITY_ALLOW");
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE");
+                entity.Property(e => e.Createdby)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("CREATEDBY");
+                entity.Property(e => e.Cta)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("CTA");
+                entity.Property(e => e.Ctaapplicable)
+                    .HasMaxLength(5)
+                    .IsUnicode(false)
+                    .HasColumnName("CTAApplicable");
+                entity.Property(e => e.Ctarate7pay)
+                    .HasColumnType("numeric(18, 0)")
+                    .HasColumnName("CTARate_7pay");
+                entity.Property(e => e.CurPayGrade)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("CUR_PAY_GRADE");
+                entity.Property(e => e.Da)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("DA");
+                entity.Property(e => e.Dp)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("DP");
+                entity.Property(e => e.EarnLeave)
+                    .HasColumnType("numeric(15, 2)")
+                    .HasColumnName("EARN_LEAVE");
+                entity.Property(e => e.Ecode)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("ECODE");
+                entity.Property(e => e.EffDate7pay)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Eff_date_7pay");
+                entity.Property(e => e.EmergencyAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("EMERGENCY_ALLOW");
+                entity.Property(e => e.EmpCodeOld)
+                    .HasMaxLength(15)
+                    .IsUnicode(false);
+                entity.Property(e => e.EmpContribution)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("EMP_CONTRIBUTION");
+                entity.Property(e => e.EmployeerContribution).HasColumnType("numeric(18, 2)");
+                entity.Property(e => e.EnLic)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("EN_LIC");
+                entity.Property(e => e.EnPli)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("EN_PLI");
+                entity.Property(e => e.Flag7pay)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Flag_7Pay");
+                entity.Property(e => e.GpfAcctNo)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("GPF_ACCT_NO");
+                entity.Property(e => e.GpfType)
+                    .HasMaxLength(5)
+                    .IsUnicode(false)
+                    .IsFixedLength()
+                    .HasColumnName("GPF_TYPE");
+                entity.Property(e => e.Gpfda)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("GPFDA");
+                entity.Property(e => e.GpsAmt)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("GPS_AMT");
+                entity.Property(e => e.GradePayJan)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("grade_pay_jan");
+                entity.Property(e => e.GradePayOld)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("grade_pay_old");
+                entity.Property(e => e.GrossPay)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("GROSS_PAY");
+                entity.Property(e => e.GssAmt)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("GSS_AMT");
+                entity.Property(e => e.Hra)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("HRA");
+                entity.Property(e => e.Hra6payLast)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("HRA_6PayLast");
+                entity.Property(e => e.HraType)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("HRA_TYPE");
+                entity.Property(e => e.Ifsc)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("IFSC");
+                entity.Property(e => e.ImpDate7pay)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Imp_date_7pay");
+                entity.Property(e => e.IsManualContribution)
+                    .HasMaxLength(5)
+                    .IsUnicode(false)
+                    .HasColumnName("isManualContribution");
+                entity.Property(e => e.IsResidingCq).HasColumnName("IsResidingCQ");
+                entity.Property(e => e.LevelCode)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("level_code");
+                entity.Property(e => e.Mded)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("MDED");
+                entity.Property(e => e.MediAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("MEDI_ALLOW");
+                entity.Property(e => e.Mpay)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("MPAY");
+                entity.Property(e => e.NextIncreDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("NEXT_INCRE_DATE");
+                entity.Property(e => e.NonPracAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("NON_PRAC_ALLOW");
+                entity.Property(e => e.OwfAcctNo)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Owf_AcctNo");
+                entity.Property(e => e.PayBand)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("PAY_BAND");
+                entity.Property(e => e.PayInPaybandJan)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("Pay_in_payband_jan");
+                entity.Property(e => e.PayInPaybandOld)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("Pay_in_payband_old");
+                entity.Property(e => e.PayMode)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("PAY_MODE");
+                entity.Property(e => e.PersonalPay)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("PERSONAL_PAY");
+                entity.Property(e => e.PhysicalHandicap)
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+                entity.Property(e => e.PrevIncreDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("PREV_INCRE_DATE");
+                entity.Property(e => e.RateDa)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("RATE_DA");
+                entity.Property(e => e.SpecialAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("SPECIAL_ALLOW");
+                entity.Property(e => e.SpecialPay)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("SPECIAL_PAY");
+                entity.Property(e => e.TabId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("tabID");
+                entity.Property(e => e.UniformAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("UNIFORM_ALLOW");
+                entity.Property(e => e.UpdateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("UPDATE_DATE");
+                entity.Property(e => e.Updatedby)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("UPDATEDBY");
+                entity.Property(e => e.VechileAllowance).HasColumnType("numeric(18, 2)");
+                entity.Property(e => e.WashingAllow)
+                    .HasColumnType("numeric(18, 2)")
+                    .HasColumnName("WASHING_ALLOW");
+            });
+
+            modelBuilder.Entity<EmployeeHindi>(entity =>
+            {
+                entity
+                    .HasNoKey()
+                    .ToTable("EmployeeHINDI");
+
+                entity.Property(e => e.Ecode)
+                    .HasMaxLength(255)
+                    .HasColumnName("ECODE");
+                entity.Property(e => e.EmpName)
+                    .HasMaxLength(255)
+                    .HasColumnName("EMP_NAME");
+                entity.Property(e => e.Hindi)
+                    .HasMaxLength(255)
+                    .HasColumnName("HINDi");
+            });
+
+            modelBuilder.Entity<EmpStopSalaryDetail>(entity =>
+            {
+                entity
+                    .HasNoKey()
+                    .ToTable("Emp_StopSalary_Detail");
+
+                entity.HasIndex(e => e.Id, "ClusteredIndex-20150211-220550").IsClustered();
+
+                entity.HasIndex(e => e.Ecode, "NonClusteredIndex-20150211-220621");
+
+                entity.Property(e => e.Designation)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+                entity.Property(e => e.Ecode)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("ECODE");
+                entity.Property(e => e.Id)
+                    .IsRequired()
+                    .HasMaxLength(6)
+                    .IsUnicode(false);
+                entity.Property(e => e.RowId).ValueGeneratedOnAdd();
+            });
+
+
+
 
         }
         public DbSet<AuditLog> AuditLogs { get; set; } = default!;
@@ -181,6 +489,10 @@ namespace Repository
         public DbSet<Account>? Accounts { get; set; }
         public virtual DbSet<MCompany> MCompanys { get; set; }
         public DbSet<MDesignationMast> MDesignationMasts { get; set; }
+        public virtual DbSet<EmpAttendance> EmpAttendances { get; set; }
+        public virtual DbSet<EmpSalaryStructure> EmpSalaryStructures { get; set; }
+        public virtual DbSet<EmployeeHindi> EmployeeHindis { get; set; }
+        public virtual DbSet<EmpStopSalaryDetail> EmpStopSalaryDetails { get; set; }
 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
