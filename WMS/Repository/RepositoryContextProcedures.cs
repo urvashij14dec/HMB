@@ -42,7 +42,47 @@ namespace Repository
         {
             _context = context;
         }
+        public virtual async Task<int> USP_FillDLLAsync(string tableName, string textField, string valueField, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
 
-      
+            var sqlParameters = new[]
+            {
+                new SqlParameter
+                {
+                    ParameterName = "TableName",
+                    Size = 256,
+                    Value = tableName ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.NVarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "TextField",
+                    Size = 256,
+                    Value = textField ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.NVarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "ValueField",
+                    Size = 256,
+                    Value = valueField ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.NVarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[USP_FillDLL] @TableName = @TableName, @TextField = @TextField, @ValueField = @ValueField", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+       
     }
 }

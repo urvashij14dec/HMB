@@ -14,6 +14,7 @@ namespace Repository.Models
 {
     public partial interface IRepositoryContextProcedures
     {
-       
+        Task<int> USP_FillDLLAsync(string tableName, string textField, string valueField, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+
     }
 }
