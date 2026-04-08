@@ -9,5 +9,7 @@ namespace Service.Contracts
         IUserService UserService { get; }
         IRoleService RoleService { get; }
         IMCompanyService MCompanyService { get; }
+
+        IDesignationService DesignationService { get; }
     }
 }

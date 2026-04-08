@@ -1,4 +1,4 @@
-﻿using Entities.Identity;
+using Entities.Identity;
 using Entities.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -101,11 +101,86 @@ namespace Repository
                     .HasColumnName("TANNO");
             });
 
+            modelBuilder.Entity<MDesignationMast>(entity =>
+            {
+                // Primary Key
+                entity.HasKey(e => e.TableId);
+
+                // Table  exact name
+                entity.ToTable("M_DESIGNATION_MAST");
+
+                // TableID (PK, Identity)
+                entity.Property(e => e.TableId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("TableID");
+
+                entity.Property(e => e.DepttCode)
+                    .HasMaxLength(4)
+                    .IsUnicode(false)
+                    .HasColumnName("DEPTT_CODE");
+
+                entity.Property(e => e.DesigCode)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("DESIG_CODE");
+
+                entity.Property(e => e.DesigDesc)
+                    .HasMaxLength(80)
+                    .IsUnicode(false)
+                    .HasColumnName("DESIG_DESC");
+
+                entity.Property(e => e.PayGrade)
+                    .HasMaxLength(4)
+                    .IsUnicode(false)
+                    .HasColumnName("PAY_GRADE");
+
+                entity.Property(e => e.CadreCode)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("CADRE_CODE");
+
+                entity.Property(e => e.EstCat)
+                    .HasMaxLength(5)
+                    .IsUnicode(false)
+                    .HasColumnName("EST_CAT");
+
+                entity.Property(e => e.EmpGenDesc)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("EMP_GEN_DESC");
+
+                entity.Property(e => e.EmpGenCd)
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .HasColumnName("EMP_GEN_CD");
+
+                entity.Property(e => e.Ccode)
+                    .IsFixedLength()
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .HasColumnName("CCODE");
+
+                entity.Property(e => e.Payscale)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("PAYSCALE");
+
+                entity.Property(e => e.OrderNumber)
+                    .HasColumnName("OrderNumber");
+
+                //  Null  Colmn handling
+                entity.Property(e => e.DesigHindi)
+                    .HasColumnName("Desig_Hindi")
+                    .IsUnicode(true);
+            });
+
+
         }
         public DbSet<AuditLog> AuditLogs { get; set; } = default!;
         public DbSet<Customer>? Customers { get; set; }
         public DbSet<Account>? Accounts { get; set; }
         public virtual DbSet<MCompany> MCompanys { get; set; }
+        public DbSet<MDesignationMast> MDesignationMasts { get; set; }
 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

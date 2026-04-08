@@ -11,26 +11,46 @@ namespace Repository
         private readonly Lazy<IAccountRepository> _accountRepository;
         private readonly Lazy<IAuditRepository> _auditRepository;
         private readonly Lazy<IMCompanyRepository> _companyRepository;
+        private readonly Lazy<IDesignationRepository> _designationRepository;
 
-        public RepositoryManager(RepositoryContext repositoryContext, RoleManager<UserRole> roleManager)
+       
+        public RepositoryManager(
+            RepositoryContext repositoryContext,
+            RoleManager<UserRole> roleManager)
         {
+      
             _repositoryContext = repositoryContext;
-            _customerRepository = new Lazy<ICustomerRepository>(() => new CustomerRepository(repositoryContext));
-            _accountRepository = new Lazy<IAccountRepository>(() => new AccountRepository(repositoryContext));
-            _auditRepository = new Lazy<IAuditRepository>(() => new AuditRepository(repositoryContext));
-            _companyRepository= new Lazy<IMCompanyRepository>(() => new MCompanyRepository(repositoryContext));
 
+            _customerRepository =
+                new Lazy<ICustomerRepository>(
+                    () => new CustomerRepository(_repositoryContext));
+
+            _accountRepository =
+                new Lazy<IAccountRepository>(
+                    () => new AccountRepository(_repositoryContext));
+
+            _auditRepository =
+                new Lazy<IAuditRepository>(
+                    () => new AuditRepository(_repositoryContext));
+
+            _companyRepository =
+                new Lazy<IMCompanyRepository>(
+                    () => new MCompanyRepository(_repositoryContext));
+
+            _designationRepository =
+                new Lazy<IDesignationRepository>(
+                    () => new DesignationRepository(_repositoryContext));
         }
 
-        #region Value Initialization
+        #region Repository Accessors
         public ICustomerRepository Customer => _customerRepository.Value;
         public IAccountRepository Account => _accountRepository.Value;
         public IAuditRepository Audit => _auditRepository.Value;
         public IMCompanyRepository MCompany => _companyRepository.Value;
+        public IDesignationRepository Designation => _designationRepository.Value;
         #endregion
 
-
-
-        public async Task SaveAsync() => await _repositoryContext.SaveChangesAsync();
+        public async Task SaveAsync() =>
+            await _repositoryContext.SaveChangesAsync();
     }
 }

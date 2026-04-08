@@ -8,6 +8,7 @@ using Shared.DataTransferObjects.Customer;
 using Shared.DataTransferObjects.User;
 using Shared.DataTransferObjects.UserRole;
 using Shared.DataTransferObjects.MCompany;
+using Shared.DataTransferObjects.Designation;
 
 namespace WMS
 {
@@ -36,6 +37,12 @@ namespace WMS
             CreateMap<MCompany, MCompanyDto>();
             CreateMap<MCompanyForCreationDto, MCompany>();
             CreateMap<MCompanyForUpdateDto, MCompany>();
+
+            /// MDesignationMast mappings
+            CreateMap<MDesignationMast, DesignationDto>();
+            CreateMap<DesignationForCreationDto, MDesignationMast>();
+            CreateMap<DesignationForUpdateDto, MDesignationMast>();
+
         }
     }
 }

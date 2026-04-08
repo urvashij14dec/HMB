@@ -6,6 +6,7 @@
         ICustomerRepository Customer { get; }
         IAccountRepository Account { get; }
         IMCompanyRepository MCompany { get; }
+        IDesignationRepository Designation { get; }
         Task SaveAsync();
     }
 }
